@@ -1,7 +1,6 @@
 # Cricket-Game-Scoreboard
 Produce the cricket game scoring for all the players.
 
-Problem:
 The rules of a cricket game are as follows:  
 1. The game is played for N overs.
 2. Each over consists of 6 balls.
