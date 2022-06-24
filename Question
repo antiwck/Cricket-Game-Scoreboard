@@ -1,0 +1,55 @@
+# Cricket-Game-Scoreboard
+Produce the cricket game scoring for all the players.
+
+Problem:
+The rules of a cricket game are as follows:  
+1. The game is played for N overs.
+2. Each over consists of 6 balls.
+3. The batting team has P number of players.
+4. At the start of the game, the first 2 players come out to play. The first player is called the striker (the one facing the current ball) and the second player is called the non-striker.
+5. The striker continues being the striker until he either gets OUT (he will be replaced by the next player who is yet to play) or his strike gets ROTATED (the striker becomes the non-striker and the non-striker becomes the striker).
+6. Each ball consists of one of the following events:
+  0 : This adds no score to the striker.
+  1 : Adds one run to the striker and the strike gets ROTATED.
+  2 : Adds two runs to the striker.
+  4 : Adds four runs to the striker.
+  6 : Adds six runs to the striker.
+  W : The striker is OUT and will be replaced by next player.
+7. At the end of every over, the strike will be ROTATED again.
+8. Write a program to implement the scoreboard of a cricket game.
+
+Input format:
+First line: T (number of test cases)
+First line in each test case: Two space-separated integers N and P
+Second line in each test case: Details of N overs (As a string)
+
+Output format:
+For each test case, print the first line as "Case X:" (where X refers to the test case number). In the next P lines, print "Player Y: " followed by the score of the Yth player.  
+
+Note:
+If the player is currently not out, output a "*" after the score.
+If the player has not yet come out to play, output "DNB" (Did not bat) instead of the score.
+It is guaranteed that at the end of the match at least 2 players are still not out.
+It is guaranteed that the last ball of the match is not a "W".
+
+Constraints:
+1 <= T <= 10
+2 <= P <= 10
+1  <= N <= 10000
+
+Sample Input:
+2
+1 2
+400111
+2 4
+4444W4666666
+
+Sample Output:
+Case 1:
+Player 1: 6*
+Player 2: 1*
+Case 2:
+Player 1: 16
+Player 2: 36*
+Player 3: 4*
+Player 4: DNB
